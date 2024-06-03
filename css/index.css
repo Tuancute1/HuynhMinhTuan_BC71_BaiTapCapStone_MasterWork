@@ -302,6 +302,9 @@ input:checked~.slider-container #moon {
 
 /* MObile & Tablet: width < 1024px */
 @media only screen and (max-width: 1023px) {
+    .navbar-toggler {
+        align-items: end;
+    }
     .search {
         width: 100%;
         height: 40px;
@@ -329,19 +332,9 @@ input:checked~.slider-container #moon {
     }
 
     .theme-switch-wrapper {
-        width: 100%;
-        height: 40px;
-    }
-    .theme-switch-wrapper .container {
-        width: 45px;
-        height: 30px;
-    }
-    .theme-switch {
-        margin: auto;
-    }
-    .theme-switch .slider {
-        font-size: 2.7rem;
-        text-align: center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 }
 

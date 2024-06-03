@@ -30,7 +30,7 @@
     <!-- HEADER -->
     <header class="container-xl w-100 z-1">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-xl">
+            <div class="container-xl d-flex justify-content-between align-items-center">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -67,19 +67,17 @@
                             <i id="search-icon" class="fas fa-search" data-bs-toggle="modal" data-bs-target="#searchModal"></i>
                         </div>
                     </div>
-                    <div class="theme-switch-wrapper d-flex justify-content-between align-items-center">
-                        <div class="container">
-                            <label class="theme-switch" for="checkbox">
-                                <input type="checkbox" id="checkbox" />
-                                <div class="slider-container">
-                                    <i id="sun" class="fa fa-sun slider"></i>
-                                    <i id="moon" class="fa fa-moon slider"></i>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
+                    
                 </div>
-                
+                <div class="theme-switch-wrapper d-flex justify-content-between align-items-center">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider-container">
+                                <i id="sun" class="fa fa-sun slider"></i>
+                                <i id="moon" class="fa fa-moon slider"></i>
+                            </div>
+                        </label>
+                </div>
             </div>
         </nav>
     </header>
