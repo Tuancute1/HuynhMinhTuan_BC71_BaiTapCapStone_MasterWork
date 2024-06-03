@@ -301,16 +301,11 @@ input:checked~.slider-container #moon {
 }
 
 /* MObile & Tablet: width < 1024px */
-@media only screen and (max-width: 102.3em) {}
-
-/* Mobile: width < 740px */
-@media only screen and (max-width: 73.9em) {
-
-    /* SEARCH */
+@media only screen and (max-width: 1023px) {
     .search {
         width: 100%;
         height: 40px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     .search .container {
         width: 45px;
@@ -344,7 +339,24 @@ input:checked~.slider-container #moon {
     .theme-switch {
         margin: auto;
     }
+    .theme-switch .slider {
+        font-size: 2.7rem;
+        text-align: center;
+    }
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 739px) {
+
+    /* SEARCH */
+    
 }
 
 /* Tablet: width >= 740px and width < 1024px */
-@media only screen and (min-width: 74.0em) and (max-width: 102.4em) {}
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+    .modal-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
