@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    font-size: 62.5%;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+/* DARK LIGHT THEME */
+:root {
+    --primary-color: #dc4f72;
+    --secondary-color: #536390;
+    --font-color: #030303;
+    /* Màu chữ mặc định */
+    --bg-color: #ffffff;
+    --heading-color: #292922;
+    --border-color: #000000;
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    /* Màu chữ trong chế độ dark */
+    --bg-color: #161625;
+    --heading-color: #e1e1ff;
+    /* Màu tiêu đề trong chế độ dark */
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    /* Sử dụng biến màu chữ */
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: calc(1rem + 0.25vh);
+}
+
+h1 {
+    color: var(--heading-color);
+    /* Sử dụng biến màu tiêu đề */
+    font-family: "Sansita One", serif;
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: var(--font-color);
+    /* Sử dụng biến màu chữ */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    border-bottom: 3px solid currentColor;
+}
+
+section {
+    max-width: 68%;
+    margin: 0 auto;
+}
+
+.post-meta {
+    font-size: 1rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 4vh;
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider {
+    cursor: pointer;
+    font-size: 2.4rem;
+    position: absolute;
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+#sun {
+    color: #000000;
+    opacity: 1;
+}
+
+#moon {
+    color: #ffffff;
+    opacity: 0;
+    transform: scale(0);
+}
+
+input:checked~.slider-container #sun {
+    opacity: 0;
+    transform: scale(0);
+}
+
+input:checked~.slider-container #moon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Đảm bảo rằng các thẻ a và p trong navbar thay đổi màu theo theme */
+.navbar-nav .nav-link,
+.navbar-brand,
+.navbar-toggler,
+.form-control,
+.btn {
+    color: var(--font-color);
+}
+
+.navbar-nav .nav-link {
+    color: var(--font-color);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--primary-color);
+}
+
+.dropdown-menu {
+    background-color: var(--bg-color);
+    border-color: var(--secondary-color);
+}
+
+.dropdown-item {
+    color: var(--font-color);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+/* .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='var(--font-color)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+} */
+
+/* HEADER */
+.navbar-nav,
+.nav-item,
+.nav-link {
+    font-size: 1.6rem;
+    margin: 5px;
+}
+
+/* .navbar-nav .nav-item {
+    display: inline-flex;
+}
+.navbar-nav .nav-link {
+    display: inline-flex;
+} */
+.navbar-nav .nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #dc4f72;
+    transition: all .5s;
+    display: block;
+}
+
+.navbar-collapse .nav-item .nav-link {
+    border: none;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 50%;
+}
+
+.dropdown-toggle::after {
+    border: none;
+}
+
+.navbar-nav .nav-link.active {
+    color: #dc4f72;
+}
+
+.navbar-light .navbar-toggler-icon {
+    color: #000000;
+}
+
+/* SEARCH */
+#search-icon {
+    font-size: 1.6rem;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding-top: 25%;
+    color: var(--font-color);
+    cursor: pointer;
+    opacity: .7;
+}
+
+/* MODAL HEADER CLOSE */
+#search-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal-content {
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    flex-grow: 1;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 0;
+    border-right: none;
+    border: 1px solid transparent;
+    border-top-left-radius: 8px;
+    font-size: 1.8rem;
+    border-bottom-left-radius: 8px;
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 0;
+    border-right: none;
+    border: 1px solid transparent;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+}
+
+.search-btn:hover {
+    background-color: rgb(233, 95, 118);
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* MObile & Tablet: width < 1024px */
+@media only screen and (max-width: 102.3em) {}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 73.9em) {
+
+    /* SEARCH */
+    .search {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+    .search .container {
+        width: 45px;
+        height: 30px;
+    }
+    #search-icon.fas {
+        font-size: 1.4rem;
+        margin-right: 5px;
+        margin: auto;
+        border-radius: 50%;
+        border: 1px solid;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding-top: 25%;
+        color: var(--font-color);
+        cursor: pointer;
+        opacity: .7;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .theme-switch-wrapper {
+        width: 100%;
+        height: 40px;
+    }
+    .theme-switch-wrapper .container {
+        width: 45px;
+        height: 30px;
+    }
+    .theme-switch {
+        margin: auto;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 74.0em) and (max-width: 102.4em) {}
