@@ -13,23 +13,31 @@ body {
 
 /* DARK LIGHT THEME */
 :root {
+    /* Màu Chữ button nền trắng */
     --primary-color: #dc4f72;
+    /* Màu chữ thường nền trắng */
     --secondary-color: #536390;
+    /* Màu chữ tiêu đề nền trắng */
     --font-color: #030303;
-    /* Màu chữ mặc định */
-    --bg-color: #ffffff;
+    /* màu bg */
+    --bg-color: white;
     --heading-color: #292922;
+    /* màu border */
     --border-color: #000000;
 }
 
 [data-theme="dark"] {
-    --primary-color: #9A97F3;
+    /* Màu chữ button nền đen */
+    --primary-color: #dc4f72;
+    /* Màu chữ thường nền trắng */
     --secondary-color: #818cab;
+    /* Màu chữ tiêu đề nền trắng */
     --font-color: #e1e1ff;
-    /* Màu chữ trong chế độ dark */
-    --bg-color: #161625;
+    /* Màu bg */
+    --bg-color: black;
     --heading-color: #e1e1ff;
-    /* Màu tiêu đề trong chế độ dark */
+    /* Màu border */
+    --border-color: black;
 }
 
 body {
@@ -201,7 +209,9 @@ input:checked~.slider-container #moon {
 .navbar-collapse .nav-item .nav-link {
     border: none;
 }
-
+.navbar-collapse i{
+    color: var(--font-color);
+}
 .navbar-nav {
     align-items: center;
 }
@@ -217,9 +227,11 @@ input:checked~.slider-container #moon {
 .navbar-nav .nav-link.active {
     color: #dc4f72;
 }
-
+.navbar-toggler {
+    border: var(--font-color) solid 1px;
+}
 .navbar-light .navbar-toggler-icon {
-    color: #000000;
+    color: var(--font-color);
 }
 
 /* SEARCH */
@@ -335,6 +347,7 @@ input:checked~.slider-container #moon {
         position: absolute;
         top: 20px;
         right: 20px;
+        flex-wrap: ;
     }
 }
 
