@@ -69,7 +69,9 @@ body {
     margin: 0 auto;
     font-size: calc(1rem + 0.25vh);
 }
-
+.container {
+    width: 63%;
+}
 /* Mặc định màu font content */
 .content .title {
     color: var(--primary-color);
@@ -490,7 +492,36 @@ input:checked~.slider-container #moon {
 .show>.btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(225, 105, 135, 0.5);
 }
+/* ABOUT OUR BOTTOM */
 
+.aboutOur__bottom .number__item {
+    background-color: var(--bg-color);
+    padding: 4rem;
+    border-radius: var(--card-curve);
+    box-shadow: var(--card-box-shadow);
+    transition: .3s ease;
+    border: 1px solid var(--border-color-light);
+}
+.aboutOur__bottom .number__item h4 {
+    font-size: var(--font-size-primary);
+    line-height: 40px;
+    text-transform: capitalize;
+    color: var(--font-color);
+    font-weight: 700;
+}
+.aboutOur__bottom .number__item .counter {
+    font-size: 50px;
+    line-height: 24px;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.aboutOur__bottom .number__item p:last-of-type {
+    font-size: var(--font-size-primary);
+    color: var(--text-color);
+    line-height: 20px;
+}
 /* Mobile: width < 740px */
 @media only screen and (max-width: 739px) {}
 
