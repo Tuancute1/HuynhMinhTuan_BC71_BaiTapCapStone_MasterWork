@@ -45,7 +45,31 @@ document.addEventListener("DOMContentLoaded", function(){
     
 });
 
+
 // READ MORE READ LESS aboutOur
+
+// move to top
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction()
+        };
+      
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+          } else {
+            document.getElementById("movetop").style.display = "none";
+          }
+        }
+      
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+// READ MORE READ LESS
 
 var dots = document.getElementById("dots");
 var moreContent = document.getElementById("more__content");
@@ -66,6 +90,7 @@ btn.addEventListener("click", function(){
     isExpanded = !isExpanded;
 });
 
+
 // READ MORE READ LESS Commit
 var dots__commit = document.getElementById("dots__commit");
 var moreContent__commit = document.getElementById("more__content__commit");
@@ -85,5 +110,6 @@ btn__commit.addEventListener("click", function(){
     }
     isExpanded = !isExpanded;
 });
+
 
 
