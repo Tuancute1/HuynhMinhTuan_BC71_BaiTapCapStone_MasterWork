@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function(){
     
 });
 
+
+// READ MORE READ LESS aboutOur
+
 // move to top
 
         // When the user scrolls down 20px from the top of the document, show the button
@@ -86,3 +89,27 @@ btn.addEventListener("click", function(){
     }
     isExpanded = !isExpanded;
 });
+
+
+// READ MORE READ LESS Commit
+var dots__commit = document.getElementById("dots__commit");
+var moreContent__commit = document.getElementById("more__content__commit");
+var readMore__commit = document.getElementById("btn__commit");
+var isExpanded = false;
+
+btn__commit.addEventListener("click", function(){
+    if(!isExpanded){
+        moreContent__commit.style.display = "inline";
+        dots__commit.style.display = "none";
+        readMore__commit.textContent = "Read Less";
+    }
+    else{
+        moreContent__commit.style.display = "none";
+        dots__commit.style.display = "inline";
+        readMore__commit.textContent = "Read More";
+    }
+    isExpanded = !isExpanded;
+});
+
+
+
