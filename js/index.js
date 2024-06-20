@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var masSearch = document.getElementById("masSearch");
     
 });
+
 // move to top
 
         // When the user scrolls down 20px from the top of the document, show the button
@@ -64,4 +65,24 @@ document.addEventListener("DOMContentLoaded", function(){
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
-  
+
+// READ MORE READ LESS
+
+var dots = document.getElementById("dots");
+var moreContent = document.getElementById("more__content");
+var readMore = document.getElementById("btn");
+var isExpanded = false;
+
+btn.addEventListener("click", function(){
+    if(!isExpanded){
+        moreContent.style.display = "inline";
+        dots.style.display = "none";
+        readMore.textContent = "Read Less";
+    }
+    else{
+        moreContent.style.display = "none";
+        dots.style.display = "inline";
+        readMore.textContent = "Read More";
+    }
+    isExpanded = !isExpanded;
+});
